@@ -86,7 +86,7 @@ if st.button('Predict Car Sale Value'):
 
     # Make prediction using the model
     predicted_value = model.predict(input_data)
-
+    predicted_value = abs(predicted_value[0][0])
     # Show the predicted sale price
     st.subheader("Predicted Car Sale Value:")
     st.write(f"₹{predicted_value[0][0]:,.2f}")
@@ -96,5 +96,5 @@ if st.button('Predict Car Sale Value'):
 
 # Add a footer section for additional information
 st.markdown("---")
-st.markdown("Made with ❤️ by [Your Name](https://github.com/your-username)")
+st.markdown("Made with ❤️ by Utkarsh Mishra")
 st.markdown("Feel free to reach out for any feedback or suggestions.")
