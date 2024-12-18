@@ -87,18 +87,22 @@ if st.button('Predict Car Sale Value'):
     # Make prediction using the model
     predicted_value = model.predict(input_data)
 
-    # Check if the prediction is a 2D array or scalar and extract the value accordingly
+    # Check if predicted_value is a list or an array and ensure it is a scalar
     predicted_value = predicted_value[0] if isinstance(predicted_value, np.ndarray) else predicted_value
+
+    # Ensure the predicted value is a numeric type (float or int)
+    predicted_value = float(predicted_value)  # Convert to float, in case it's not already
 
     # Ensure the predicted value is non-negative by taking the absolute value
     predicted_value = abs(predicted_value)  # Remove negative sign if it exists
 
     # Show the predicted sale price
     st.subheader("Predicted Car Sale Value:")
-    st.write(f"₹{predicted_value:,.2f}")
+    st.write(f"₹{predicted_value:,.2f}")  # Format the value as currency with commas and two decimal places
 
     # Additional user-friendly information
     st.write(f"This prediction is based on the details you provided and might vary with market conditions.")
+
 
 
 # Add a footer section for additional information
