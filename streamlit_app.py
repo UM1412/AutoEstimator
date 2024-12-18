@@ -53,16 +53,10 @@ seat = st.number_input("Enter Number of Seats:", min_value=2, max_value=8, value
 
 # Displaying a preview of the inputs
 st.subheader("Entered Details:")
-st.write(f"**Location:** {location}")
-st.write(f"**Fuel Type:** {fuel_type}")
-st.write(f"**Transmission:** {transmission}")
-st.write(f"**Owner Type:** {owner_type}")
-st.write(f"**Brand:** {brand}")
-st.write(f"**Car Age:** {year} years")
-st.write(f"**Kilometers Driven:** {km} km")
-st.write(f"**Mileage:** {mileage} km/l")
-st.write(f"**Engine Capacity:** {cc} CC")
-st.write(f"**Power:** {power} bhp")
+st.write(f"**Location:** {location}          |    **Fuel Type:** {fuel_type}    |    **Transmission:** {transmission}")
+st.write(f"**Owner Type:** {owner_type}      |    **Brand:** {brand}            |    **Car Age:** {year} years")
+st.write(f"**Kilometers Driven:** {km} km    |   **Mileage:** {mileage} km/l    |    **Engine Capacity:** {cc} CC")
+st.write(f"**Power:** {power} bhp            |   **Seats:** {seat}")
 st.write(f"**Seats:** {seat}")
 
 # Function to process inputs and predict
